@@ -28,11 +28,10 @@ This lab builds on the Active Directory environment created in previous labs. Th
 </ul>
 
 <p>
-If you have not completed the environment setup, refer to the following project:
+Refer to the following lab for the domain environment setup:
 </p>
-
 <p>
-<b>Active Directory Domain Deployment in Microsoft Azure</b>
+<a href="https://github.com/chrisdegutis/configure-ad"><b>Active Directory Domain Deployment in Microsoft Azure</b></a>
 </p>
 
 <h2>Environments and Technologies Used</h2>
