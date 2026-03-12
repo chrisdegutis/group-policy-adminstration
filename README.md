@@ -67,3 +67,95 @@ This lab demonstrates centralized administration and endpoint security managemen
 <li>Verifying applied policies using <b>gpresult /r</b></li>
 <li>Testing policy enforcement on the client machine</li>
 </ul>
+
+<h2>Deployment and Configuration Steps</h2>
+
+<h3>Step 1: Open Group Policy Management</h3>
+
+<p>
+Log into <b>DC-1</b> using the domain administrator account <b>mydomain.com\jane_admin</b>.
+</p>
+
+<p>
+Open <b>Group Policy Management</b> by selecting <b>Tools → Group Policy Management</b> from <b>Server Manager</b>.
+</p>
+<hr>
+
+<h3>Step 2: Create a Domain Security Baseline GPO</h3>
+<p>
+Right-click <b>mydomain.com</b> and select <b>Create a GPO in this domain, and Link it here</b>.
+</p>
+<p>
+Name the new policy <b>Domain Security Baseline</b>.
+</p>
+<hr>
+
+<h3>Step 3: Configure the Domain Password Policy</h3>
+
+<p>
+Right-click the <b>Domain Security Policy</b> GPO and select <b>Edit</b>.
+</p>
+
+<p>
+Navigate to:
+</p>
+
+<p>
+<b>Computer Configuration → Policies → Windows Settings → Security Settings → Account Policies → Password Policy</b>
+</p>
+
+<ul>
+<li><b>Enforce password history:</b> 5 passwords remembered</li>
+<li><b>Maximum password age:</b> 60 days</li>
+<li><b>Minimum password length:</b> 10 characters</li>
+<li><b>Password must meet complexity requirements:</b> Enabled</li>
+</ul>
+<hr>
+
+<h3>Step 4: Configure the Account Lockout Policy</h3>
+
+<p>
+Within the same GPO, navigate to:
+</p>
+
+<p>
+<b>Computer Configuration → Policies → Windows Settings → Security Settings → Account Policies → Account Lockout Policy</b>
+</p>
+
+<ul>
+<li><b>Account lockout threshold:</b> 5 invalid logon attempts</li>
+<li><b>Account lockout duration:</b> 15 minutes</li>
+<li><b>Reset account lockout counter after:</b> 15 minutes</li>
+</ul>
+<hr>
+
+<h3>Step 5: Create a Workstation Security Baseline GPO</h3>
+
+<p>
+Right-click the <b>_CLIENTS</b> Organizational Unit and select <b>Create a GPO in this domain, and Link it here</b>.
+</p>
+
+<p>
+Name the policy <b>Workstation Security Baseline</b>.
+</p>
+<hr>
+
+<h3>Step 6: Configure a Login Banner</h3>
+
+<p>
+Edit the <b>Client Security Policy</b> GPO.
+</p>
+
+<p>
+Navigate to:
+</p>
+
+<p>
+<b>Computer Configuration → Policies → Windows Settings → Security Settings → Local Policies → Security Options</b>
+</p>
+
+<ul>
+<li><b>Interactive logon: Message title for users attempting to log on</b></li>
+<li><b>Interactive logon: Message text for users attempting to log on</b></li>
+</ul>
+<hr>
