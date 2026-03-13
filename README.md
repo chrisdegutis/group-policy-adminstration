@@ -358,6 +358,7 @@ Run the following command to immediately apply the newly configured Group Policy
 <p>
 This command forces the workstation to refresh and apply the latest policies from the domain controller instead of waiting for the default Group Policy refresh interval.
 </p>
+<img width="800" height="1162" alt="image" src="https://github.com/user-attachments/assets/60c3bd25-2d48-4c3d-8995-9473b8144b1e" />
 <hr>
 
 <h3>Step 15: Verify Applied Group Policies</h3>
@@ -390,6 +391,7 @@ Confirm that both of the following policies appear in the list:
 <p>
 This verifies that both the domain-level and workstation-level Group Policy configurations are successfully applied to <b>Client-1</b>.
 </p>
+<img width="800" height="678" alt="image" src="https://github.com/user-attachments/assets/ea82cefa-1297-4bad-bdb8-19c2dc545163" />
 <hr>
 
 <h3>Step 16: Test the Policies</h3>
