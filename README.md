@@ -327,8 +327,32 @@ This helps ensure that firewall protection remains enabled on domain-joined work
 
 <hr>
 
+<h3>Step 14: Enable Group Policy Loopback Processing</h3>
+<p>
+Because the <b>Workstation Security Baseline</b> GPO is linked to the <b>_CLIENTS</b> Organizational Unit, its <b>Computer Configuration</b> settings apply to client machines in that OU. However, <b>User Configuration</b> settings such as Control Panel restrictions and Command Prompt restrictions normally apply based on the location of the <b>user account</b> in Active Directory, not the computer.
+</p>
+<p>
+Since domain users such as <b>ascott</b> are located in the <b>_EMPLOYEES</b> Organizational Unit, those user-based settings will not apply automatically when they sign into <b>Client-1</b>.
+</p>
+<p>
+To ensure that the user settings in the <b>Workstation Security Baseline</b> GPO apply to any user who logs into computers in the <b>_CLIENTS</b> OU, enable <b>Group Policy Loopback Processing</b>.
+</p>
+<p>
+On <b>DC-1</b>, edit the <b>Workstation Security Baseline</b> GPO and navigate to:
+</p>
+<p>
+<b>Computer Configuration → Policies → Administrative Templates → System → Group Policy</b>
+</p>
+<p>
+Open <b>Configure user Group Policy loopback processing mode</b>, set it to <b>Enabled</b>, and choose the <b>Merge</b> option.
+</p>
+<p>
+This allows user policies linked to the workstation OU to be merged with the user’s normal policies, ensuring that restrictions configured for <b>Client-1</b> are applied when a standard domain user signs in.
+</p>
+<img width="800" height="1910" alt="image" src="https://github.com/user-attachments/assets/f69b539d-77de-499e-9c0a-4bd36b182263" />
+<hr>
 
-<h3>Step 14: Update Group Policy on Client-1</h3>
+<h3>Step 15: Update Group Policy on Client-1</h3>
 
 <p>
 Using <b>Remote Desktop Connection</b>, connect to the client virtual machine <b>Client-1</b>.
@@ -361,7 +385,7 @@ This command forces the workstation to refresh and apply the latest policies fro
 <img width="800" height="1162" alt="image" src="https://github.com/user-attachments/assets/60c3bd25-2d48-4c3d-8995-9473b8144b1e" />
 <hr>
 
-<h3>Step 15: Verify Applied Group Policies</h3>
+<h3>Step 16: Verify Applied Group Policies</h3>
 
 <p>
 While still logged into <b>Client-1</b>, open <b>PowerShell as an Administrator</b> if it is not already open.
