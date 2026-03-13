@@ -82,6 +82,7 @@ Log into <b>DC-1</b> using the domain administrator account:
 <p>
 Open <b>Group Policy Management</b> by selecting <b>Tools → Group Policy Management</b> from <b>Server Manager</b>.
 </p>
+
 <hr>
 
 <h3>Step 2: Create a Domain Security Baseline GPO</h3>
