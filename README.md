@@ -73,9 +73,12 @@ This lab demonstrates centralized administration and endpoint security managemen
 <h3>Step 1: Open Group Policy Management</h3>
 
 <p>
-Log into <b>DC-1</b> using the domain administrator account <b>mydomain.com\jane_admin</b>.
+Log into <b>DC-1</b> using the domain administrator account:
 </p>
-
+<p>
+Username: mydomain.com\jane_admin
+Password: Cyberlab123!
+</p>
 <p>
 Open <b>Group Policy Management</b> by selecting <b>Tools → Group Policy Management</b> from <b>Server Manager</b>.
 </p>
