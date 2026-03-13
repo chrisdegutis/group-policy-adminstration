@@ -53,19 +53,19 @@ Refer to the following lab for the domain environment setup:
 </ul>
 
 <h2>High-Level Deployment and Configuration Steps</h2>
-
 <p>
-This lab demonstrates centralized administration and endpoint security management in an Active Directory environment by:
+This lab demonstrates how <b>Group Policy</b> can be used to centrally manage security and configuration settings within an <b>Active Directory</b> environment. Both <b>domain-level</b> and <b>workstation-level</b> policies were implemented to simulate how enterprise organizations enforce security baselines and maintain consistent system configurations across their network infrastructure.
 </p>
-
 <ul>
-<li>Creating and linking a <b>Group Policy Object (GPO)</b> to the <b>_CLIENTS</b> Organizational Unit</li>
-<li>Configuring a <b>login banner</b> to display a security notice to users</li>
-<li>Restricting access to <b>Control Panel</b> and <b>Command Prompt</b> for standard users</li>
-<li>Blocking <b>removable storage devices</b> to help prevent unauthorized data transfer</li>
-<li>Updating Group Policy on a domain-joined client machine using <b>gpupdate /force</b></li>
-<li>Verifying applied policies using <b>gpresult /r</b></li>
-<li>Testing policy enforcement on the client machine</li>
+<li>Creating a <b>Domain Security Baseline</b> Group Policy Object linked to the domain to enforce authentication security standards such as password complexity requirements and account lockout protections.</li>
+<li>Configuring domain-wide <b>Password Policy</b> settings including password history, minimum password length, and complexity requirements to strengthen identity security.</li>
+<li>Implementing an <b>Account Lockout Policy</b> to protect against repeated failed authentication attempts and reduce the risk of brute-force password attacks.</li>
+<li>Creating a <b>Workstation Security Baseline</b> Group Policy Object linked to the <b>_CLIENTS</b> Organizational Unit to centrally manage endpoint configuration for domain-joined client machines.</li>
+<li>Configuring workstation security controls including login banners, restrictions on Control Panel and Command Prompt access, blocking removable storage devices, and disabling consumer-focused Windows features.</li>
+<li>Enforcing automatic workstation locking through a <b>Screen Lock Policy</b> that requires a password after a period of inactivity to help protect unattended systems.</li>
+<li>Ensuring <b>Windows Defender Firewall</b> is enabled through Group Policy to maintain endpoint network protection across all domain-joined client systems.</li>
+<li>Managing <b>Windows Update</b> behavior through Group Policy to centrally schedule update installation and maintain consistent patch management across client machines.</li>
+<li>Applying and validating the configured policies by updating Group Policy on the client machine and verifying applied policies using administrative tools such as <b>gpupdate</b> and <b>gpresult</b>.</li>
 </ul>
 
 <h2>Deployment and Configuration Steps</h2>
