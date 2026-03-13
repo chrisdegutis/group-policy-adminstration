@@ -344,7 +344,7 @@ Log in using the following domain administrator credentials:
 </p>
 
 <p>
-After logging in, open <b>PowerShell</b> by right-clicking the <b>Start Menu</b> and selecting <b>Windows PowerShell</b>.
+After logging in, open <b>PowerShell as an Administrator</b>.
 </p>
 
 <p>
