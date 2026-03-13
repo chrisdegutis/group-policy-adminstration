@@ -415,3 +415,5 @@ After configuring these policies, Group Policy updates were applied to the clien
 <p>
 This lab demonstrates practical experience with <b>Active Directory Group Policy administration</b>, <b>domain security baselines</b>, and <b>enterprise workstation management</b>. These are foundational skills used by system administrators and IT support professionals to centrally manage security, enforce organizational standards, and maintain consistent configuration across enterprise environments.
 </p>
+
+
