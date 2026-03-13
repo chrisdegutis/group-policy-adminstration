@@ -364,7 +364,7 @@ This command forces the workstation to refresh and apply the latest policies fro
 <h3>Step 15: Verify Applied Group Policies</h3>
 
 <p>
-While still logged into <b>Client-1</b>, open <b>PowerShell</b> if it is not already open.
+While still logged into <b>Client-1</b>, open <b>PowerShell as an Administrator</b> if it is not already open.
 </p>
 
 <p>
