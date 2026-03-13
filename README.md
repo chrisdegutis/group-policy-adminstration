@@ -82,7 +82,7 @@ Log into <b>DC-1</b> using the domain administrator account:
 <p>
 Open <b>Group Policy Management</b> by selecting <b>Tools → Group Policy Management</b> from <b>Server Manager</b>.
 </p>
-
+<img width="800" height="2012" alt="image" src="https://github.com/user-attachments/assets/f02cb090-a5d0-4eca-bfa8-f1177b572513" />
 <hr>
 
 <h3>Step 2: Create a Domain Security Baseline GPO</h3>
@@ -142,6 +142,7 @@ Right-click the <b>_CLIENTS</b> Organizational Unit and select <b>Create a GPO i
 <p>
 Name the policy <b>Workstation Security Baseline</b>.
 </p>
+<img width="800" height="1368" alt="image" src="https://github.com/user-attachments/assets/73c7a686-7dc7-417f-86a2-c10a722c175d" />
 <hr>
 
 <h3>Step 6: Configure a Login Banner</h3>
