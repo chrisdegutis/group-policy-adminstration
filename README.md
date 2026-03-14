@@ -2,7 +2,7 @@
 <img src="https://i.imgur.com/pU5A58S.png" alt="Microsoft Active Directory Logo"/>
 </p>
 
-<h1>Group Policy Administration in Active Directory</h1>
+<h1>Enterprise Active Directory Group Policy Management and Security Baselines</h1>
 
 <p>
 This lab demonstrates how <b>Group Policy</b> is used in an <b>Active Directory</b> environment to centrally manage user and computer settings. Using the domain environment previously deployed in Microsoft Azure, the lab focuses on creating, linking, configuring, and validating Group Policy Objects (GPOs) within the domain.
@@ -422,8 +422,11 @@ This verifies that both the domain-level and workstation-level Group Policy conf
 
 <ul>
 <li>Sign out and verify the login banner appears</li>
+  <img width="800" height="1187" alt="image" src="https://github.com/user-attachments/assets/bfd2fbe9-7b4d-46c5-8ef9-ced7d16a6856" />
 <li>Attempt to open Control Panel</li>
+<img width="800" height="956" alt="image" src="https://github.com/user-attachments/assets/efb49278-e027-4846-a449-b2e6577af2fd" />
 <li>Attempt to open Command Prompt</li>
+  <img width="1960" height="1028" alt="image" src="https://github.com/user-attachments/assets/390dff99-1ea1-49ca-bb79-42d85f54c03f" />
 <li>Test removable storage access if available</li>
 </ul>
 <hr>
@@ -431,23 +434,27 @@ This verifies that both the domain-level and workstation-level Group Policy conf
 <h2>Conclusion</h2>
 
 <p>
-In this lab, <b>Group Policy</b> was used to implement centralized configuration and security management within an <b>Active Directory</b> environment hosted in <b>Microsoft Azure</b>. Two separate Group Policy Objects were created to demonstrate how policies can be applied at different scopes within a domain.
+In this lab, <b>Group Policy</b> was used to centrally manage security and configuration settings within an <b>Active Directory</b> domain environment hosted in <b>Microsoft Azure</b>. Two separate Group Policy Objects were implemented to demonstrate how policies can be applied at different scopes within an enterprise network.
 </p>
 
 <p>
-A <b>Domain Security Baseline</b> policy was configured at the domain level to enforce authentication standards such as password complexity requirements and account lockout protections. These settings help strengthen identity security across the entire domain by ensuring consistent password policies and protecting against repeated failed authentication attempts.
+A <b>Domain Security Baseline</b> policy was applied at the domain level to enforce authentication security controls, including password complexity requirements and account lockout protections. These policies help protect domain accounts against weak passwords and repeated failed authentication attempts.
 </p>
 
 <p>
-A second policy, the <b>Workstation Security Baseline</b>, was applied to the <b>_CLIENTS</b> Organizational Unit to manage workstation security and user environment settings. These configurations included displaying a login banner, restricting access to Control Panel and Command Prompt, blocking removable storage devices, disabling consumer-focused Windows features, configuring Windows Update behavior, enforcing screen lock policies, and ensuring Windows Defender Firewall protection remains enabled.
+A <b>Workstation Security Baseline</b> policy was applied to the <b>_CLIENTS</b> Organizational Unit to manage endpoint configuration for domain-joined client machines. This included enforcing login banners, restricting access to Control Panel and Command Prompt, blocking removable storage devices, disabling consumer-focused Windows features, configuring scheduled Windows Updates, enforcing screen lock policies, and ensuring Windows Defender Firewall remains enabled.
 </p>
 
 <p>
-After configuring these policies, Group Policy updates were applied to the client machine and verified using administrative tools such as <b>gpupdate</b> and <b>gpresult</b>. The applied policies were then tested on the domain-joined workstation to confirm that the security and configuration settings were successfully enforced.
+To ensure user-based restrictions apply to all users who log into domain workstations, <b>Group Policy Loopback Processing</b> was enabled. This allows user configuration settings within the workstation policy to apply based on the computer’s Organizational Unit rather than the user’s location in Active Directory.
 </p>
 
 <p>
-This lab demonstrates practical experience with <b>Active Directory Group Policy administration</b>, <b>domain security baselines</b>, and <b>enterprise workstation management</b>. These are foundational skills used by system administrators and IT support professionals to centrally manage security, enforce organizational standards, and maintain consistent configuration across enterprise environments.
+After configuring these policies, Group Policy updates were applied to the client machine and verified using administrative tools such as <b>gpupdate</b>, <b>gpresult</b>, and direct testing of workstation restrictions. The successful enforcement of these policies demonstrates how administrators can centrally manage security baselines and endpoint configurations across enterprise environments.
+</p>
+
+<p>
+This lab highlights practical experience with <b>Active Directory administration</b>, <b>Group Policy management</b>, <b>enterprise workstation security configuration</b>, and <b>centralized policy enforcement</b>, which are foundational skills used by IT support specialists, system administrators, and enterprise infrastructure teams.
 </p>
 
 
